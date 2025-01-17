@@ -3,11 +3,8 @@ import WeatherRequest from '../models/WeatherRequest.js';
 
 const router = express.Router();
 
-
 router.get('/details/:id', async (req, res) => {
     const { id } = req.params;
-    console.log("id==>", id);
-    
 
     try {
         const record = await WeatherRequest.findByPk(id);

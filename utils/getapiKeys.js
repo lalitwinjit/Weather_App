@@ -1,6 +1,5 @@
 import ApiKey from '../models/ApiKey.js';
 
-
 async function getApiKey(keyName) {
     const apiKeyRecord = await ApiKey.findOne({ where: { keyName } });
 

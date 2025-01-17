@@ -1,7 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
-import WeatherRequest from '../models/WeatherRequest.js'; 
+import WeatherRequest from '../models/WeatherRequest.js';
 import getApiKey from '../utils/getapiKeys.js';
 
 const router = express.Router();
@@ -12,8 +12,6 @@ router.post('/', async (req, res) => {
     const mapboxApiKey = await getApiKey('MAPBOX_API_KEY');
     const openWeatherApiKey = await getApiKey('OPENWEATHERMAP_API_KEY');
 
-    const history = await WeatherRequest.findAll();
-    
     try {
         const mapboxUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${mapboxApiKey}`;
         process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";

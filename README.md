@@ -12,8 +12,8 @@
 
 ## Setup Instructions
 
-1. git clone <repository-url>
-2. cd weather-app
+1. git clone https://github.com/lalitwinjit/Weather_App
+2. cd Weather_App
 3. npm install
 4. Replace your database credentials in the env file.
 5. npm start
