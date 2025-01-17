@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Weather Details</h1>
+        <div class="card p-4">
+            <h3>{{ address }}</h3>
+            <ul>
+                <li><strong>Latitude:</strong> {{ latitude }}</li>
+                <li><strong>Longitude:</strong> {{ longitude }}</li>
+                <li><strong>Temperature:</strong> {{ weather.temp }}°C</li>
+                <li><strong>Feels Like:</strong> {{ weather.feels_like }}°C</li>
+                <li><strong>Humidity:</strong> {{ weather.humidity }}%</li>
+                <li><strong>Description:</strong> {{ weather.description }}</li>
+            </ul>
+        </div>
+        <div class="mt-4">
+            <a href="/" class="btn btn-primary">Back to History</a>
+        </div>
+    </div>
+</body>
+</html>
