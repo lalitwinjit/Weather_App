@@ -17,4 +17,5 @@
 3. npm install
 4. Replace your database credentials in the env file.
 5. npm start
+6. Go to crome and and visit the application by navigating to: http://localhost:3000
 
